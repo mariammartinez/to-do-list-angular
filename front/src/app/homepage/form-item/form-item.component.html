@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="saveItem($event)">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title> La LISTE</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input  formControlName="description"  type="text" matInput placeholder="Description" required>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-checkbox formControlName="checked"  class="example-margin">Check me!</mat-checkbox>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" type="submit" >
+        Créer
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+
+
+<style>
+  .card {
+    width: 30%;
+    margin: auto;
+  }
+
+</style>

@@ -1,0 +1,17 @@
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<div class="row">
+  <mat-selection-list #articles class="col-4">
+    <mat-list-option *ngFor="let name of items ">
+      {{name.description}}
+      {{name.createdAt}}
+    </mat-list-option>
+  </mat-selection-list>
+  <p>
+    Articles sélectionnées {{articles.selectedOptions.selected.length}}
+  </p>
+
+</div>
+
+
+
+
